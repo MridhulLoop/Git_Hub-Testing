@@ -1,0 +1,54 @@
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:          FileNameAndType.java
+// Course:        CS200;Spring 2022
+//
+// Author:         Mridhul Nair Baskaran
+// Email:           mbaskaran@wisc.edu
+// Lecturer's Name: Jim Williams
+//
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Source or Recipient; Description
+// Examples (REMOVE in your code - unless Jane Doe helped you and you helped John Doe accordingly):
+// Jane Doe; helped me with for loop in reverse method
+// https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html; 
+//         counting for loop
+// John Doe; I helped with switch statement in main method.
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
+
+import java.util.Scanner;
+
+public class FileNameAndType {
+	
+	public static String getFileName(String file) {
+       String fileName = file.substring(file.indexOf("-")+1,file.indexOf(".") );
+       return fileName;
+       
+       
+       
+    }
+
+    public static String getFileType(String file) {
+        String fileType= file.substring(file.indexOf(".")+1);
+        String fileTypeLower = fileType.toLowerCase();
+        return fileTypeLower; 
+    }
+	public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    String file;
+    String file2;
+    String file3;
+    file = input.nextLine();
+    file2 = input.nextLine();
+    file3 =input.nextLine();
+    System.out.println("Name: "+ getFileName(file)+ "," + " Type: " + getFileType(file));
+    System.out.println("Name: "+ getFileName(file2)+ "," + " Type: " + getFileType(file2));
+    System.out.println("Name: "+ getFileName(file3)+ "," + " Type: " + getFileType(file3));
+    
+
+    
+	}
+	
+}
